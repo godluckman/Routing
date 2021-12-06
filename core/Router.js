@@ -11,12 +11,13 @@ export class Router {
     this.routeEmit(path, 'GET', cbf);
     }
 
-    // post(path, cbf){
-    //     this.routeEmit(path, 'POST', cbf);
-    // }
+    post(path, cbf){
+        this.routeEmit(path, 'POST', cbf);
+    }
 
     routeEmit(path, method, cbf){
             this.routes[path] = this.routes[path] || {};
             this.routes[path][method] = cbf
     }
+
 }
